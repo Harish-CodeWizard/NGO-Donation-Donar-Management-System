@@ -1,0 +1,36 @@
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  background: #f5f1eb;
+  padding: 10px; 
+}
+
+.slider-track {
+  display: flex;
+  width: calc(120%); 
+  animation: scrollLeft 30s linear infinite;
+}
+
+.slide-image {
+  width: 15%; 
+  object-fit:contain;
+  border-radius: 6px;
+  margin-right: 7px;
+  transition: transform 0.3s ease;
+}
+
+.slide-image:hover {
+  transform: scale(1.05);
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

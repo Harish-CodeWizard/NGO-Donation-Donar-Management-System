@@ -1,0 +1,138 @@
+html, body, #root, .landing-root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
+}
+
+
+.topbar {
+  background: #151515;
+  color: #fff;
+  padding: 6px 34px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.97rem;
+  align-items: center;
+}
+
+.navbar {
+  width: 100%;
+  padding: 16px 30px;
+  background: linear-gradient(90deg, #005792, #00bcd4); 
+  display: flex;
+  align-items: center;  
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position:relative;
+  top: 0;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+
+}
+
+.nav-links li a,
+.nav-links li button {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  background: transparent;
+  border: 2px solid transparent;
+  padding: 8px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li button:hover {
+  background-color: #ffffff;
+  color: #005792;
+  border-color: #fff;
+  transform: scale(1.05);
+}
+.nav-links li button {
+  background-color: #ffd600;
+  color: #222;
+  font-weight: bold;
+  box-shadow: 0 2px 19px #ffd60055;
+}
+.nav-links li button:hover {
+  background-color: #fbc02d;
+  color: #fff;
+}
+
+.hero-section {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 96px); /* adjust for navbar + topbar height */
+  background: url('/images/hero-bg.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.48);
+}
+
+.hero-content {
+  position: relative;
+  color: #fff;
+  z-index: 1;
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 2.9rem;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  margin: 0 0 15px 0;
+  text-shadow: 2px 4px 20px #0007;
+}
+
+.hero-content p {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 29px;
+  letter-spacing: 0.08em;
+}
+
+.donate-btn {
+  background: #ffd600;
+  color: #222;
+  font-size: 1.23rem;
+  font-weight: bold;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 19px #ffd60055;
+}
+.donate-btn:hover {
+  background: #fbc02d;
+  color: #fff;
+}
+
