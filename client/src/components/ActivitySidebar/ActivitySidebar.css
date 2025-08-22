@@ -1,0 +1,150 @@
+/* src/components/ActivitySidebar/ActivitySidebar.css */
+.activity-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 400px;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: transparent;
+  border: 2px solid transparent;
+  min-height: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.activity-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s ease;
+}
+
+.activity-item:hover::before {
+  left: 100%;
+}
+
+.activity-item:hover {
+  background: #f8f9fa;
+  transform: translateX(15px);
+  border-color: #e9ecef;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.activity-item.active {
+  background: #FF5722;
+  color: white;
+  transform: translateX(20px);
+  box-shadow: 0 15px 35px rgba(255, 87, 34, 0.4);
+  border-color: #FF5722;
+}
+
+.activity-item.active .icon-emoji {
+  transform: scale(1.2);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.activity-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.activity-item.active .activity-icon {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.icon-emoji {
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+}
+
+.activity-name {
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  line-height: 1.3;
+  flex: 1;
+}
+
+@media (max-width: 1024px) {
+  .activity-sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    max-width: none;
+  }
+  
+  .activity-item {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    min-height: 70px;
+  }
+  
+  .activity-item:hover,
+  .activity-item.active {
+    transform: translateY(-8px);
+  }
+  
+  .activity-name {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .activity-sidebar {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .activity-item {
+    max-width: 300px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .activity-item {
+    padding: 1rem;
+    gap: 1rem;
+    min-height: 60px;
+  }
+  
+  .activity-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .icon-emoji {
+    font-size: 1.5rem;
+  }
+  
+  .activity-name {
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+  }
+}

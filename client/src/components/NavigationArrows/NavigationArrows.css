@@ -1,0 +1,53 @@
+/* src/components/NavigationArrows/NavigationArrows.css */
+.navigation-arrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+
+.nav-arrow {
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+}
+
+.nav-arrow:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.nav-arrow:active {
+  transform: scale(0.95);
+}
+
+.nav-arrow svg {
+  transition: transform 0.2s ease;
+}
+
+.nav-arrow:hover svg {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .navigation-arrows {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
+  
+  .nav-arrow {
+    width: 50px;
+    height: 50px;
+  }
+}
