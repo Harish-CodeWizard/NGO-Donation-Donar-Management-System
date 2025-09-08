@@ -1,0 +1,16 @@
+{
+  "node": {
+    "404d1efa1ca56e8064dd81331838947a6768a392b8": {
+      "workers": {
+        "app/reports/page": {
+          "moduleId": "[project]/.next-internal/server/app/reports/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/ai/flows/generate-donor-recognition-report.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/reports/page": "action-browser"
+      }
+    }
+  },
+  "edge": {}
+}
